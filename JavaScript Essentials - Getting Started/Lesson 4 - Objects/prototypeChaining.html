@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang "en">
+<head>
+	<meta charset = "utf-8">
+	<title> Car Object </title>
+	<script type = "text/javascript">
+	
+		function Car(make, model, transmission) 
+		{
+			this.make = make;
+			this.model = model;
+			this.transmission = transmission;
+			this.reportStats = function()
+			{
+				return ("Make: " + this.make + "<BR>" + " Model: " + model);
+			}
+		}
+		
+		function SUV(make, model, transmission, mpg)
+		{
+			this.mpg = mpg;
+			this.carInfo = Car; // inheritance is here
+			this.carInfo(make, model, transmission); //inheritance is here
+		}
+		
+		SUV.prototype = new Car(); // gotta use the term prototype for inheritence 
+		
+		SUV.prototype.getMPG = function () 
+		{
+			return " The SUV mpg is " + this.mpg;
+		}
+		
+		mySUV = new SUV("Kia", "Sportage", "manual", 32);
+		
+		myCar = new Car("VW", "Jetta", "automatic");
+		
+		document.writeln(mySUV.reportStats());
+		
+	//	document.writeln(myCar.getMPG());// this is wrong because parents cant grab functions from their children :0
+		
+		
+		
+	</script>
+		
+</head>
+<body>
+		
+		
+</body>
+</html>

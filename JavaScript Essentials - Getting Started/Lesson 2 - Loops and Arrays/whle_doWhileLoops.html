@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> Whike and Do While Loops </title>
+</head>
+
+<body>
+	<script>
+		function count()
+		{
+		
+		
+		/*
+			var x = 0;
+			while(x < 101)
+			{
+				document.getElementById('output').innerHTML += (x + "<br/>") ;
+				
+				x++;
+			}
+		*/
+		
+		var i = 100;
+		do
+		{
+			document.getElementById('output').innerHTML += (i + "<br/>");
+			i--;
+		}while(i > -1);
+		
+		}
+	</script>
+	 <p id = "output"> </p>
+	 <button onclick = "count()"> COUNT! </button>
+</body>
+</html>

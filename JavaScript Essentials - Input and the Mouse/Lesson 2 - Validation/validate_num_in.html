@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang "en">
+<head>
+<meta charset = "utf-8">
+<title> JavaScript </title>
+<script type = "text/javascript">
+	function chkNums(numInput)
+	{
+		var result = valNums();
+		var x;
+		document.getElementById("output").innerHTML = result;
+		function valNums()
+		{
+			var validNums = /^[0-9]+$/;
+			if(numInput.value.match(validNums))
+			{
+				x = true;
+				return x;
+			}
+			else
+			{
+				alert('Please enter numbers only');
+				x = false;
+				return x;
+			}
+		}
+	}
+	
+</script>
+<style>
+p {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:16px;
+}		
+</style>
+
+</head>
+<body>
+<form name = "myForm" action = "#" onsubmit = "return false">
+<input type = "text" id = "num1" name = "num1" />
+<input type = "submit" value = "Submit now" onclick = "chkNums(document.myForm.num1)" />
+<br><br>
+<span id = "output"></span>
+</form>
+
+		
+		
+</body>
+</html>

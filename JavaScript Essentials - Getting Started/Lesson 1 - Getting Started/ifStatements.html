@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> if Statements </title>
+</head>
+
+<body>
+
+	<script>
+		var score = 12000;
+		var highscore = 15000;
+		
+		
+		
+		function checkScore()
+		{
+			if(score > highscore)
+			{
+				highscore = score;
+				document.getElementById("output").innerHTML = "You have the new high score. Congratulations!";
+			} else
+			{
+				document.getElementById("output").innerHTML = "Your score isn't the high score. Try again!";
+			}
+		}
+		
+		
+	</script>
+	
+	<p id = "output" > </p>
+	<button onclick = "checkScore()"> Check Score </button>
+
+
+</body>
+</html>

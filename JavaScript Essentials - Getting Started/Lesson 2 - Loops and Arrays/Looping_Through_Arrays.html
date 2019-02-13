@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> Looping through Arrays </title>
+</head>
+
+<body>
+	<script>
+		var airlines= new Array();
+		airlines[0] = "Delta";
+		airlines[1] = "US Airways";
+		airlines[2] = "American";
+		airlines[3] = "jetBlue";
+		airlines[4] = "Virgin America";
+		airlines[5] = "United";
+		airlines[6] = "Air Canada";
+		airlines[7] = "Southwest";
+		airlines[8] = "British Airways";
+		
+	
+		
+		function output()
+		{
+			var len = airlines.length;
+			for(var i = 0; i < len; i++)
+			{
+				document.getElementById('output').innerHTML += airlines[i] + "<br/>";
+			}
+		}
+		
+	</script>
+	 <p id = "output"> </p>
+	 <button onclick = "output()"> GIMME ARRAYS! </button>
+</body>
+</html>

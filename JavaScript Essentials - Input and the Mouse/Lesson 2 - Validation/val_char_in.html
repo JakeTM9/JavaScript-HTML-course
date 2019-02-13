@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang "en">
+<head>
+<meta charset = "utf-8">
+<title> JavaScript </title>
+<script type = "text/javascript">
+	function chkChars(txtInput)
+	{
+		var result = valChars();
+		var x;
+		document.getElementById("output").innerHTML = result;
+		function valChars()
+		{
+			var validChars = /^[a-zA-z]+$/;
+			if(txtInput.value.match(validChars))
+			{
+				x = true;
+				return x;
+			}
+			else
+			{
+				alert('Please enter letters only');
+				x = false;
+				return x;
+			}
+		}
+	}
+	
+</script>
+<style>
+p{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:16px;
+}		
+</style>
+
+</head>
+<body>
+<form name = "myForm" action = "#" onsubmit = "return false">
+<input type = "text" id = "text1" name = "text1" />
+<input type = "submit" value = "Submit now" onclick = "chkChars(document.myForm.text1)" />
+<br><br>
+<span id = "output"></span>
+</form>
+
+		
+		
+</body>
+</html>

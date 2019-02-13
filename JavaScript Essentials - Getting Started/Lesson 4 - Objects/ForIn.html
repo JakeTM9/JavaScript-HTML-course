@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang "en">
+<head>
+	<meta charset = "utf-8">
+	<title> JavaScript Custom Objects </title>
+	<script type = "text/javascript">
+	
+		var dog = new Object();
+		dog.name = "Teddy";
+		dog.gender = "male";
+		dog.age = 3;
+		dog.breed = "mixed"
+		
+		document.writeln("The dog's name is: " + dog.name + "<BR>" +
+						 "The dog's gender is: " + dog.gender + "<BR>" +
+						 "The dog's age is: " + dog.age + "<BR>" + 
+						 "The dog's breed is: " + dog.breed + "<BR>");
+						 
+						 
+		for (x in dog)
+		{
+			document.writeln(dog[x] + "<BR>");
+		}
+	</script>
+		
+</head>
+<body>
+		
+		
+</body>
+</html>

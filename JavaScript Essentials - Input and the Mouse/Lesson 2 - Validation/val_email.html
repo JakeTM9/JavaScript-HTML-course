@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+<head>
+<meta charset = "utf-8" />
+<title>Javascript</title>
+<script type = "text/javascript">
+	function validateEmail()
+	{
+		document.getElementById("output").innerHTML = "";
+		var emailAdd = document.getElementById("email").value;
+		var symbolPos = emailAdd.indexOf("@");
+		var dotPos = emailAdd.lastIndexOf(".");
+		if (symbolPos > 0 &&
+		symbolPos + 2 <= dotPos &&
+		dotPos +2 <= emailAdd.length) 
+		{
+			outputTxt = emailAdd + " received";
+			document.getElementById("output").innerHTML = outputTxt;
+			
+		}
+		else
+		{
+			document.getElementById("output").innerHTML = "Failed.";
+		}
+	}
+</script>
+</head>
+<body>	
+Email: <input type = "text" id = "email">
+<input type = "submit" value = "Submit" onclick = "validateEmail()" onsubmit = "return false">
+<br><br>
+<span id = "output"></span>
+</body>
+</html>

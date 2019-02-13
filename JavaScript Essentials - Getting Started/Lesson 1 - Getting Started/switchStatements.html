@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> Switch Statements </title>
+</head>
+
+<body>
+
+	<script>
+		var zipCode = "00000";
+		var town;
+		
+		function checkZip()
+		{
+			switch(zipCode)
+			{	
+				case "06611":
+					town = "Trumbull";
+					break;
+				case "06066":
+					town = "Vernon";
+					break;
+				case "06443":
+					town = "Madison";
+					break;
+				case "06880":
+					town = "Westport";
+					break;
+				default:
+					town = "No Match";
+			}
+			
+			document.getElementById("output").innerHTML = "Town: " + town;
+		}
+		
+		
+	</script>
+	
+	<p id = "output" > </p>
+	<button onclick = "checkZip()"> Check Town </button>
+
+
+</body>
+</html>

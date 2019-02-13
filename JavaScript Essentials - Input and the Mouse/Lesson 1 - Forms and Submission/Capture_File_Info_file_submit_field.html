@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang "en">
+<head>
+<meta charset = "utf-8">
+<title> JavaScript </title>
+<script type = "text/javascript">
+	function checkFile()
+	{
+		var uploadFile = document.getElementById("fileSubmit");
+		var fileValue = uploadFile.value;
+		var fileName = uploadFile.name;
+		var fileType = uploadFile.type;
+		var output = fileValue + '<br>' + fileName + '<br>' + fileType;
+		document.getElementById("outputDiv2").innerHTML = output;
+	}
+	
+</script>		
+</head>
+<body>
+<form id = "fileSelect" method = "post" enctype = "multipart/form-data" onsubmit = "return false;">
+Select a file: <input type = "file" id = "fileSubmit" name = "fileSubmit" size = "25" />
+<br /> <br />
+<input type = "submit" value = "OK" onclick = "checkFile()" />
+</form>
+<div id = "outputDiv2" style = "height: 50px;"></div>
+		
+		
+</body>
+</html>

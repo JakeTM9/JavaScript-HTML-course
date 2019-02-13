@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> Declaring Arrays </title>
+</head>
+
+<body>
+	<script>
+		var airlines= new Array();
+		airlines[0] = "Delta";
+		airlines[1] = "US Airways";
+		airlines[2] = "American";
+		airlines[3] = "jetBlue";
+		airlines[4] = "Virgin America";
+		
+		var family = new Array("Mark", "Brett", "Kerry", "Joan", "Rick");
+		
+		var states = ["Connecticut", "New York", "Vermont", "Texas", "Washington"];
+		
+		function output()
+		{
+			document.getElementById('output').innerHTML = airlines[3] + "<br/>" + family[3] + "<br/>" + states[2];
+		}
+		
+	</script>
+	 <p id = "output"> </p>
+	 <button onclick = "output()"> GIMME ARRAYS! </button>
+</body>
+</html>
